@@ -53,9 +53,9 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-blue-600 py-12 px-4 ">
+    <div className="min-h-screen bg-black py-12 px-4 ">
       <div className="max-w-lg mx-auto  my-auto bg-white border  border-gray-200 rounded shadow-sm">
-        <div className="border-b border-gray-200 bg-blue-500 px-6 py-4">
+        <div className="border-b border-gray-200 bg-gray-900 px-6 py-4">
           <h1 className="text-2xl font-semibold text-white">Todo List</h1>
         </div>
         
@@ -66,11 +66,11 @@ function App() {
               value={newTodo}
               onChange={(e) => setNewTodo(e.target.value)}
               placeholder="What needs to be done?"
-              className="flex-1 px-4 py-2 bg-white border border-gray-300 rounded text-gray-700 placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+              className="flex-1 px-4 py-2 bg-white border border-gray-300 rounded text-gray-800 placeholder-gray-900 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
             />
             <button
               type="submit"
-              className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 flex items-center gap-2 transition-colors"
+              className="px-6 py-2 bg-gray-700 text-white rounded hover:bg-black focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 flex items-center gap-2 transition-colors"
             >
               <PlusCircle size={20} />
               <span>Add</span>
@@ -87,7 +87,7 @@ function App() {
                   type="checkbox"
                   checked={todo.completed}
                   onChange={() => toggleComplete(todo.id)}
-                  className="w-5 h-5 border-gray-300 rounded text-blue-600 focus:ring-blue-500"
+                  className="w-5 h-5 border-gray-300 rounded text-black-600 focus:ring-black-500"
                 />
                 
                 {editingId === todo.id ? (
@@ -96,7 +96,7 @@ function App() {
                       type="text"
                       value={editText}
                       onChange={(e) => setEditText(e.target.value)}
-                      className="flex-1 px-3 py-1 border border-gray-300 rounded focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                      className="flex-1 px-3 py-1 border border-gray-300 rounded focus:outline-none focus:border-black-500 focus:ring-1 focus:ring-black-500"
                     />
                     <button
                       onClick={saveEdit}
@@ -121,7 +121,7 @@ function App() {
                     <div className="flex gap-1">
                       <button
                         onClick={() => startEdit(todo)}
-                        className="p-1 text-gray-500 hover:text-blue-600"
+                        className="p-1 text-gray-500 hover:text-black-600"
                         title="Edit"
                       >
                         <Edit2 size={20} />
